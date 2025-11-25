@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aloqa va Hisob O'chirish - Filter Gold Kush</title>
+    <meta name="description" content="Filter Gold Kush MCHJ - Aloqa ma'lumotlari, hisob o'chirish va ma'lumotlarni saqlash siyosati">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #0066cc;
+            font-weight: 700;
+        }
+
+        /* Company Info Section */
+        .company-info {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .company-info h2 {
+            margin-bottom: 20px;
+        }
+
+        .company-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .detail-item {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .detail-item strong {
+            color: #0066cc;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Account Deletion Section */
+        .account-deletion {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .account-deletion h2 {
+            margin-bottom: 25px;
+            color: #0066cc;
+        }
+
+        .important-notice {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeeba 100%);
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 30px;
+        }
+
+        .important-notice h3 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .important-notice p {
+            color: #856404;
+            margin: 0;
+        }
+
+        .steps-list {
+            counter-reset: step;
+            list-style: none;
+            padding: 0;
+        }
+
+        .steps-list li {
+            counter-increment: step;
+            position: relative;
+            padding: 20px 20px 20px 70px;
+            margin-bottom: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            min-height: 60px;
+        }
+
+        .steps-list li::before {
+            content: counter(step);
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .steps-list li strong {
+            color: #0066cc;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Data Retention Section */
+        .data-retention {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .data-retention h2 {
+            margin-bottom: 25px;
+            color: #0066cc;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .data-table th {
+            background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+            color: white;
+            font-weight: 600;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .data-table tr:hover {
+            background: #e3f2fd;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-deleted {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .badge-retained {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            background: linear-gradient(135deg, #0066cc 0%, #004999 100%);
+            padding: 60px 0;
+            color: white;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .contact-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-card svg {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 15px;
+        }
+
+        .contact-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-card p {
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .company-info,
+            .account-deletion,
+            .data-retention {
+                padding: 25px;
+            }
+
+            .steps-list li {
+                padding: 15px 15px 15px 60px;
+            }
+
+            .steps-list li::before {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .data-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .contact-info {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><a href="index.html">Filter Gold Kush</a></div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <a href="mailto:info@filtergoldkush.uz" style="color: white; text-decoration: none;">info@filtergoldkush.uz</a>
+                    </div>
+                    <div class="contact-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <a href="tel:+998977913883" style="color: white; text-decoration: none;">+998 97 791 38 83</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Aloqa va Ma'lumotlar Siyosati</h1>
+            <p>Hisob o'chirish bo'yicha ko'rsatmalar va ma'lumotlarni saqlash siyosati haqida batafsil ma'lumot</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Company Information -->
+            <section class="company-info">
+                <h2 class="section-title">Kompaniya Ma'lumotlari</h2>
+                <div class="company-details">
+                    <div class="detail-item">
+                        <strong>Kompaniya nomi:</strong>
+                        Filter Gold Kush MCHJ
+                    </div>
+                    <div class="detail-item">
+                        <strong>Ilova nomi:</strong>
+                        Filter Gold Kush
+                    </div>
+                    <div class="detail-item">
+                        <strong>Dasturchi:</strong>
+                        Filter Gold Kush MCHJ
+                    </div>
+                    <div class="detail-item">
+                        <strong>Aloqa email:</strong>
+                        <a href="mailto:info@filtergoldkush.uz">info@filtergoldkush.uz</a>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Telefon:</strong>
+                        <a href="tel:+998977913883">+998 97 791 38 83</a>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Manzil:</strong>
+                        O'zbekiston Respublikasi
+                    </div>
+                </div>
+            </section>
+
+            <!-- Account Deletion Instructions -->
+            <section class="account-deletion">
+                <h2 class="section-title">Hisobni O'chirish Bo'yicha Ko'rsatmalar</h2>
+                
+                <div class="important-notice">
+                    <h3>⚠️ Muhim Eslatma</h3>
+                    <p>Hisobingizni o'chirishdan oldin, ushbu amal qaytarib bo'lmasligini va barcha ma'lumotlaringiz yo'qotilishini unutmang. Iltimos, bu qarorni sinchkovlik bilan o'ylab ko'ring.</p>
+                </div>
+
+                <h3 style="margin-bottom: 20px; color: #333;">Hisobni o'chirish uchun quyidagi bosqichlarni bajaring:</h3>
+
+                <ol class="steps-list">
+                    <li>
+                        <strong>1-Bosqich: Ilovaga kiring</strong>
+                        Filter Gold Kush ilovasini oching va o'z hisobingizga kiring.
+                    </li>
+                    <li>
+                        <strong>2-Bosqich: Sozlamalarni oching</strong>
+                        Ilovaning asosiy menyusidan "Sozlamalar" (Settings) bo'limiga o'ting.
+                    </li>
+                    <li>
+                        <strong>3-Bosqich: Hisob sozlamalarini tanlang</strong>
+                        "Hisob sozlamalari" (Account Settings) yoki "Profil" bo'limini tanlang.
+                    </li>
+                    <li>
+                        <strong>4-Bosqich: Hisobni o'chirish tugmasini bosing</strong>
+                        "Hisobni o'chirish" (Delete Account) tugmasini toping va bosing.
+                    </li>
+                    <li>
+                        <strong>5-Bosqich: Tasdiqlash</strong>
+                        Hisobni o'chirishni tasdiqlash uchun parolingizni kiriting yoki ko'rsatilgan amallarni bajaring.
+                    </li>
+                    <li>
+                        <strong>6-Bosqich: Yakuniy tasdiqlash</strong>
+                        Oxirgi tasdiqlash oynasida "Ha, hisobimni o'chirish" tugmasini bosing.
+                    </li>
+                </ol>
+
+                <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin-top: 25px;">
+                    <h4 style="color: #0066cc; margin-bottom: 10px;">📧 Alternativ usul: Email orqali so'rov yuborish</h4>
+                    <p style="margin-bottom: 10px;">Agar ilova orqali hisobni o'chira olmasangiz, quyidagi email manziliga so'rov yuborishingiz mumkin:</p>
+                    <p><strong>Email:</strong> <a href="mailto:info@filtergoldkush.uz">info@filtergoldkush.uz</a></p>
+                    <p style="margin-top: 10px; font-size: 14px; color: #666;">
+                        So'rovingizda quyidagi ma'lumotlarni ko'rsating:
+                    </p>
+                    <ul style="margin-top: 10px; margin-left: 20px; color: #666;">
+                        <li>To'liq ismingiz</li>
+                        <li>Ro'yxatdan o'tgan email manzilingiz</li>
+                        <li>Telefon raqamingiz</li>
+                        <li>Hisobni o'chirish sababi (ixtiyoriy)</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-size: 14px; color: #333;">
+                        <strong>Javob muddati:</strong> So'rovingizga 7 ish kuni ichida javob beriladi.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Data Retention Information -->
+            <section class="data-retention">
+                <h2 class="section-title">Ma'lumotlarni Saqlash va O'chirish Siyosati</h2>
+                
+                <p style="margin-bottom: 25px; color: #666;">
+                    Quyidagi jadvalda hisobingiz o'chirilganda qanday ma'lumotlar o'chirilishi yoki saqlanishi haqida batafsil ma'lumot berilgan:
+                </p>
+
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Ma'lumot turi</th>
+                            <th>O'chiriladi/Saqlanadi</th>
+                            <th>Saqlash muddati</th>
+                            <th>Izoh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Shaxsiy ma'lumotlar (ism, email, telefon)</td>
+                            <td><span class="badge badge-deleted">O'chiriladi</span></td>
+                            <td>Darhol</td>
+                            <td>Hisob o'chirilgandan so'ng darhol o'chiriladi</td>
+                        </tr>
+                        <tr>
+                            <td>Profil rasmi</td>
+                            <td><span class="badge badge-deleted">O'chiriladi</span></td>
+                            <td>Darhol</td>
+                            <td>Serverlardan to'liq o'chiriladi</td>
+                        </tr>
+                        <tr>
+                            <td>Buyurtmalar tarixi</td>
+                            <td><span class="badge badge-retained">Saqlanadi</span></td>
+                            <td>5 yil</td>
+                            <td>Moliyaviy hisobot va soliq maqsadlari uchun anonimlashtirilib saqlanadi</td>
+                        </tr>
+                        <tr>
+                            <td>To'lov ma'lumotlari</td>
+                            <td><span class="badge badge-deleted">O'chiriladi</span></td>
+                            <td>30 kun</td>
+                            <td>Xavfsizlik maqsadida 30 kun ichida to'liq o'chiriladi</td>
+                        </tr>
+                        <tr>
+                            <td>Manzil ma'lumotlari</td>
+                            <td><span class="badge badge-deleted">O'chiriladi</span></td>
+                            <td>Darhol</td>
+                            <td>Yetkazib berish manzillari o'chiriladi</td>
+                        </tr>
+                        <tr>
+                            <td>Ilova sozlamalari</td>
+                            <td><span class="badge badge-deleted">O'chiriladi</span></td>
+                            <td>Darhol</td>
+                            <td>Barcha shaxsiy sozlamalar o'chiriladi</td>
+                        </tr>
+                        <tr>
+                            <td>Texnik loglar</td>
+                            <td><span class="badge badge-retained">Saqlanadi</span></td>
+                            <td>90 kun</td>
+                            <td>Xavfsizlik va texnik tahlil uchun anonimlashtirilib saqlanadi</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="color: #0066cc; margin-bottom: 15px;">📋 Qo'shimcha ma'lumot</h4>
+                    <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
+                        <li>Hisobingiz o'chirilgandan so'ng, shu email manzil bilan yangi hisob yaratishingiz mumkin.</li>
+                        <li>O'chirilgan ma'lumotlarni qayta tiklash imkoni yo'q.</li>
+                        <li>Qonunchilik talablariga ko'ra ba'zi ma'lumotlar anonimlashtirilib saqlanishi mumkin.</li>
+                        <li>Barcha saqlangan ma'lumotlar xavfsiz serverlarimizda himoyalangan holda saqlanadi.</li>
+                        <li>Ma'lumotlaringiz hech qachon uchinchi shaxslarga sotilmaydi yoki berilmaydi.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Biz Bilan Bog'laning</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    <h3>Telefon</h3>
+                    <a href="tel:+998977913883">+998 97 791 38 83</a>
+                </div>
+                <div class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <h3>Email</h3>
+                    <a href="mailto:info@filtergoldkush.uz">info@filtergoldkush.uz</a>
+                </div>
+                <div class="contact-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <h3>Manzil</h3>
+                    <p>O'zbekiston Respublikasi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Filter Gold Kush MCHJ. Barcha huquqlar himoyalangan.</p>
+            <p><a href="index.html">Bosh sahifaga qaytish</a> | Sifatli suv - sog'lom hayot!</p>
+        </div>
+    </footer>
+</body>
+</html>
